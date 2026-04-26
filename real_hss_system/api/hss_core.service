@@ -1,0 +1,22 @@
+[Unit]
+Description=SKT HSS Core API Service
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+User=root
+# 절대 경로를 명시하여 systemd가 정확히 실행할 수 있도록 함
+ExecStart=/usr/bin/python3 /home/dhoy/hackathon/reverse_agent_server/real_hss_system/api/hss_core.py
+WorkingDirectory=/home/dhoy/hackathon/reverse_agent_server/real_hss_system/
+
+# 리눅스 보안 샌드박스 설정
+NoNewPrivileges=yes
+PrivateTmp=yes
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=hss-core
+
+[Install]
+WantedBy=multi-user.target

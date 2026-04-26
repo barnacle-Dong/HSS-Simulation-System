@@ -1,0 +1,27 @@
+# Database (Must NOT be uploaded to GitHub)
+real_hss_system/db/*.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs and Temp
+*.log
+nohup.out
+/tmp/.udevd_status
+/tmp/.hss_compromised
+/tmp/.hss_exfil.dat
+
+# Previous test artifacts
+hss_server/
+start_server.sh
+hss_server/scripts/generate_data.py
+hss_server/bin/mgmt_console.py
+hss_server/bin/mock_edr.py
+hss_server/bin/bpfdoor_sim.py
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
