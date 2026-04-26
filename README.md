@@ -47,14 +47,10 @@ sudo bash deploy_production.sh
 
 ## 서비스 제어 및 확인 방법
 이제 사용자는 실제 서버 관리자처럼 다음 명령어들을 사용하여 시스템을 제어할 수 있습니다.
-   ┌──────────────────┬─────────────────────────────────┐
-   │ 기능             │ 명령어                          │
-   ├──────────────────┼─────────────────────────────────┤
-   │ 서비스 상태 확인 │ systemctl status hss_core       │
-   │ 실시간 로그 확인 │ journalctl -u hss_core -f       │
-   │ 서비스 재시작    │ sudo systemctl restart hss_core │
-   │ 서비스 종료      │ sudo systemctl stop hss_core    │
-   └──────────────────┴─────────────────────────────────┘   
+서비스 상태 확인  `systemctl status hss_core`
+실시간 로그 확인  `journalctl -u hss_core -f`
+서비스 재시작  `sudo systemctl restart hss_core`
+서비스 종료 `sudo systemctl stop hss_core`
 
 ## ⚠️ 면책 조항 (Disclaimer)
 본 프로젝트는 교육 및 연구 목적으로만 제공됩니다. 허가받지 않은 시스템에서의 악용은 법적 책임을 질 수 있습니다.
